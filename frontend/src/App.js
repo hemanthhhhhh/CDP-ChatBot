@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
-import BubbleBackground from './components/BubbleBackground';
 import ChatHistory from './components/ChatHistory';
 
 function App() {
@@ -53,7 +52,6 @@ function App() {
 
   return (
     <>
-      <BubbleBackground />
       {showHistory && <ChatHistory history={chatHistory} onClose={() => setShowHistory(false)} />}
       <h1>CDP Chatbot</h1>
         <button className="history-button" onClick={() => setShowHistory(!showHistory)}>
